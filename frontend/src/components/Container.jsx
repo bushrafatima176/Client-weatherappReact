@@ -6,7 +6,7 @@ import  BasicTabs from "./Navbar"
 
 export default function MainContainer() {
   return (
-    <><div>< BasicTabs/></div>
+    <><div><BasicTabs/></div>
      
     </>
     
