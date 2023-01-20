@@ -26,3 +26,14 @@ code {
   color: white;
   font-size: 50px;
 }
+
+.inputfields{
+  font-weight: bold;
+  font-size: 20px;
+}
+.app-field{
+  font-size: 30px;
+  padding: 40px;
+
+ 
+}

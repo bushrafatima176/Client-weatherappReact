@@ -31,6 +31,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Home from "./Home"
 import { textAlign } from '@mui/system';
+
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -72,8 +74,8 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider', paddingLeft:"40%" }}>
+    <Box sx={{ width: '100%' ,backgroundColor:"White"}}>
+      <Box sx={{ borderBottom: 2,backgroundColor:"#B4ECE3",borderColor: 'divider', paddingLeft:"40%" }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Sign in" {...a11yProps(1)} />
@@ -81,7 +83,7 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-       <Home/>
+       <Home/> 
       </TabPanel>
       <TabPanel value={value} index={1}>
         Sign in
@@ -89,6 +91,7 @@ export default function BasicTabs() {
       <TabPanel value={value} index={2}>
        Sign up
       </TabPanel>
+  
     </Box>
   );
 }
