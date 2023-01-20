@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.home-container {
+  /* background-color: #7cc0d8;
+  width: 100%;
+  height :100vh; */
+
+}
+
+.main-heading {
+  padding-top: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
