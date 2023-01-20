@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.masterdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+    margin: 10px;
+}
+
+.partdivtwo{
+    padding: 30px;
+}
+
+.dashboarddiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;   
+}
+
+form{
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+button{
+    padding: 5px;
+    margin: 5px;
+}
+.cardlayout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;   
+}
+
