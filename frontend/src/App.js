@@ -1,11 +1,11 @@
 import React from 'react';
 import  CenteredTabs from "./components/Navbar"
-import FixedContainer from './components/Container';
+import MainContainer from './components/Container';
 
 const App = () => {
   return (
     <>
-      < FixedContainer />
+      < MainContainer />
     </>
   )
 }

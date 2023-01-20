@@ -2,17 +2,13 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import  CenteredTabs from "./Navbar"
+import  BasicTabs from "./Navbar"
 
-export default function FixedContainer() {
+export default function MainContainer() {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container>
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
-        < CenteredTabs/>
-      </Container>
-
-    </React.Fragment>
+    <><div>< BasicTabs/></div>
+     
+    </>
+    
   );
 }
