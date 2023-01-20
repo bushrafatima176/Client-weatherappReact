@@ -9,7 +9,7 @@ RR-FP - Sprint 1 - Task 2: Implement your Wireframes using Material UI (complete
 ![alt-text](https://github.com/bushrafatima176/Client-weatherappReact/blob/master/html%20semantic/pro2html2.PNG)
 
 RR-FP - Sprint 1 - Task 3: Create an City Weather Card layout and an Cities Weather List component
-1. Card Layout
+1. Card Layout 
 ![alt-text](https://github.com/bushrafatima176/Client-weatherappReact/blob/master/html%20semantic/pro2html3.PNG)
 2. List component
 ![alt-text](https://github.com/bushrafatima176/Client-weatherappReact/blob/master/html%20semantic/pro2html2.PNG)
