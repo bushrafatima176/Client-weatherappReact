@@ -10,14 +10,15 @@ import BasicTabs from "./components/Navbar"
 const App = () => {
   return (
     <>
-       {/* <BrowserRouter>
+       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Loginnew />} />
-        <Route path='/signup' element={<Signupnew />} />
+        <Route path='/' element={<BasicTabs />} />
+        {/* <Route path='/login' element={<Loginnew/>}/>
+        <Route path='/signup' element={<Signupnew />} /> */}
         {/* <Route path='/dashboard' element={<Welcome />} /> */}
-      {/* </Routes>
-    </BrowserRouter> */} 
- <BasicTabs/>
+       </Routes>
+    </BrowserRouter> 
+ {/* <BasicTabs/> */}
 
     </>
   )

@@ -31,6 +31,9 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Home from "./Home"
 import { textAlign } from '@mui/system';
+import { Link } from 'react-router-dom';
+import Signupnew from "./Signup";
+import Loginnew from "./Signin";
 
 
 function TabPanel(props) {
@@ -86,12 +89,11 @@ export default function BasicTabs() {
        <Home/> 
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Sign in
+        <Loginnew/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-       Sign up
+      <Signupnew/>
       </TabPanel>
-  
     </Box>
   );
 }

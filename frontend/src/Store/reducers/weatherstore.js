@@ -14,7 +14,7 @@ const initialState = {
     isError: false,
 }
 
-const addUser = createAsyncThunk('weatherSlice/create', async (data, thunkApi) =>{
+export const addUser = createAsyncThunk('weatherSlice/create', async (data, thunkApi) => {
     const requestOptions = {
         method: 'POST',
         headers: {
@@ -28,7 +28,7 @@ const addUser = createAsyncThunk('weatherSlice/create', async (data, thunkApi) =
 
 });
 
-const readUser = createAsyncThunk('weatherSlice/get', async (data, thunkApi) =>{
+export const readUser = createAsyncThunk('weatherSlice/get', async (data, thunkApi) => {
     const requestOptions = {
         method: 'POST',
         headers: {
@@ -42,7 +42,7 @@ const readUser = createAsyncThunk('weatherSlice/get', async (data, thunkApi) =>{
 
 });
 
-const addCity = createAsyncThunk('weatherSlice/addcity', async (data, thunkApi) =>{
+export const addCity = createAsyncThunk('weatherSlice/addcity', async (data, thunkApi) => {
     const requestOptions = {
         method: 'POST',
         headers: {
@@ -60,22 +60,28 @@ const weatherSlice = createSlice({
     name: 'weatherSlice',
     initialState,
     reducers: {
+        loggingIn: (state, action) => {
+            state.isLoggedIn = action.payload
+        },
 
+        currentUser: (state, action) => {
+            state.currentUser = action.payload;
+        }
     },
     extraReducers: {
-        [addUser.pending]: ()=>{
+        [addUser.pending]: () => {
             console.log('pending');
         },
-        [addUser.fulfilled]: (state, action)=>{
-            alert(action.payload.mesage);
+        [addUser.fulfilled]: (state, action) => {
+            alert(action.payload.message);
         },
-        [addUser.rejected]: ()=>{
+        [addUser.rejected]: () => {
             console.log('rejected');
         },
-        [readUser.pending]: ()=>{
+        [readUser.pending]: () => {
             console.log('pending');
         },
-        [readUser.fulfilled]: (state, action)=>{
+        [readUser.fulfilled]: (state, action) => {
             if (action.payload.error !== undefined) {
                 state.isError = true;
                 alert(action.payload.error);
@@ -84,16 +90,16 @@ const weatherSlice = createSlice({
                 state.isError = false;
                 state.currentUser = action.payload.data;
                 state.isLoggedIn = true;
-                alert('successfully logged in');
+                // alert('successfully logged in');
             }
         },
-        [readUser.rejected]: ()=>{
+        [readUser.rejected]: () => {
             console.log('rejected');
         },
-        [addCity.pending]: ()=>{
+        [addCity.pending]: () => {
             console.log('pending');
         },
-        [addCity.fulfilled]: (state, action)=>{
+        [addCity.fulfilled]: (state, action) => {
             if (action.payload.message !== undefined) {
                 //state.isError = true;
                 alert(action.payload.message);
@@ -102,11 +108,12 @@ const weatherSlice = createSlice({
                 state.currentUser = action.payload.data
             }
         },
-        [addCity.rejected]: ()=>{
+        [addCity.rejected]: () => {
             console.log('rejected');
         },
 
     }
 });
 
+export const { loggingIn, currentUser } = weatherSlice.actions;
 export default weatherSlice.reducer;
