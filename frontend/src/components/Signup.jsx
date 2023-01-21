@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 // import { registerUser } from "../store/reducers/UserReducer";
 import {addUser} from '../Store/reducers/weatherstore';
-import userIcon from "./Images/user1.png"
+import userIcon from "./Images/user2.png"
 import './login.css';
 
 const Signupnew = () => {
@@ -30,7 +30,7 @@ const Signupnew = () => {
             setEmail('');
             setUsername('');
             setPassword('');
-            //navigate('/');
+            navigate('/');
         }
         else {
             alert('input fields must not be empty');
@@ -38,7 +38,7 @@ const Signupnew = () => {
     }
 
     return (
-        <>
+        <> 
             <div className="loginBox">
                 <img className="user" src={userIcon} height="100px" width="100px" />
                 <h3>Sign-In</h3>
@@ -64,6 +64,9 @@ const Signupnew = () => {
                     <input onClick={setData} type="submit" name="" value="Signup" />
                 </form>
                 <div className="text-center">
+                </div>
+                <div className="text-center">
+                    <Link style={{textAlign:"center"}} to="/">Login</Link>
                 </div>
             </div>
         </>
