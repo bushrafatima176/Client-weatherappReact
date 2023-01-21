@@ -1,0 +1,4 @@
+Color theme:
+Redish color : #fe7062;
+Heading color :#565BEA;
+Dashboard button icon :#91b3fa;

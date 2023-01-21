@@ -15,24 +15,24 @@ const DetailedInfo = () => (<div>
 			<TableBody>
      
     <TableRow> 
-					<TableCell style={{color:"white",fontSize: '20px' }}>Temperature</TableCell>
-					<TableCell style={{color:"white",fontSize: '20px'}}>&deg;</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px' }}>Temperature</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}>&deg;</TableCell>
 				</TableRow>
 				<TableRow>
-					<TableCell  style={{color:"white",fontSize: '20px'}}>Feel Like</TableCell>
-					<TableCell style={{color:"white",fontSize: '20px'}}>&deg;</TableCell>
+					<TableCell  style={{color:"white",fontSize: '15px'}}>Feel Like</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}>&deg;</TableCell>
 				</TableRow>
         <TableRow>
-					<TableCell  style={{color:"white",fontSize: '20px'}}>Pressure</TableCell>
-					<TableCell style={{color:"white",fontSize: '20px'}}>%</TableCell>
+					<TableCell  style={{color:"white",fontSize: '15px'}}>Pressure</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}>%</TableCell>
 				</TableRow>
 				<TableRow>
-					<TableCell  style={{color:"white",fontSize: '20px'}}>Humidity</TableCell>
-					<TableCell style={{color:"white",fontSize: '20px'}}>%</TableCell>
+					<TableCell  style={{color:"white",fontSize: '15px'}}>Humidity</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}>%</TableCell>
 				</TableRow>
 				<TableRow>
-					<TableCell  style={{color:"white",fontSize: '20px'}}>Wind Speed</TableCell>
-					<TableCell style={{color:"white",fontSize: '20px'}}></TableCell>
+					<TableCell  style={{color:"white",fontSize: '15px'}}>Wind Speed</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}></TableCell>
 				</TableRow>
 			
 			</TableBody>

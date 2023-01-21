@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { currentUser, readUser, loggingIn } from '../Store/reducers/weatherstore';
 import userIcon from "./Images/user.png";
 import "./login.css"
+import Lottie from "lottie-react"
+import weatherapp from "./Images/103361-weather.json"
 
 const Loginnew = () => {
 
@@ -38,7 +40,12 @@ const Loginnew = () => {
 
     return (
         <>
-        
+
+            <Lottie
+                animationData={weatherapp}
+                loop={true}
+
+            />
             <div className="loginBox">
                 <img className="user" src={userIcon} height="100px" width="100px" />
                 <h3>Sign-In</h3>
@@ -60,8 +67,8 @@ const Loginnew = () => {
                 <div className="text-center">
 
                 </div>
-                  <div className="text-center">
-                    <Link style={{textAlign:"center"}} to="/Signup">Sign-up</Link>
+                <div className="text-center">
+                    <Link style={{ textAlign: "center" }} to="/Signup">Sign-up</Link>
                 </div>
             </div>
         </>

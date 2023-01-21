@@ -1,15 +1,23 @@
-import BasicTextFields from "./Inputfields";
-import AppField from './Fields';
+import MediaCard from "./DashboardDesign"
+import image from "./Images/weather.png"
 import BasicModal from "./Navbar"
-const DashboardApp = ()=>{
-    return(
-        <><div style={{display:"flex",flexDirection:"row" , padding:"20%"}}>
-        <div style={{display:"flex",flexDirection:"row"}}>
-        <BasicTextFields/> </div> 
-         <BasicModal/>  <div>
-        </div>
-        </div>
-       </>
+
+
+const DashboardApp = () => {
+    return (
+        <>
+            <h1 style={{ textAlign: "center", color: "#565BEA", fontSize: "40px", marginTop: "50px" }} c>
+                Weather App
+            </h1>
+            <br />
+            <div style={{ display: "flex", flexDirection: "row" }}> <MediaCard />
+                <img src={image} style={{ width: "40%", paddingLeft: "80px" }} /></div>
+          
+        </>
+
+
+
+
     )
 }
 

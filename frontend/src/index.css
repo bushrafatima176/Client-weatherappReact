@@ -23,43 +23,21 @@ code {
 .inputfields {
   font-weight: bold;
   font-size: 20px;
+  color: #565BEA;
 }
 
 .app-field {
   font-size: 30px;
   padding: 40px;
-
+  color: #565BEA;
+ 
 
 }
 
-/* .whole-details-area {
-  background-color: transparent;
-  margin: 10%;
-  width: 20%;
-  border-radius: 30px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22)
-} */
 
 .detail-text {
   color: white;
-  padding: 20px;
   text-align: center;
+  font-size: 30x;
+  padding: 10px;
 }
-
-.weather-details {
-  color: white;
-
-}
-
-.detail-text{
-  font-size: 20px;
-}
-/* .detail-date {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22);
-  background-color: transparent;
-  width: 390px;
-  border-radius: 30px;
-
-} */
