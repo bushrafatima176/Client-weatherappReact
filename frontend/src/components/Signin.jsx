@@ -6,14 +6,11 @@ import userIcon from "./Images/user.png";
 import "./login.css"
 import Lottie from "lottie-react"
 import weatherapp from "./Images/103361-weather.json";
-import {io} from 'socket.io-client';
-const socket = io.connect("http://localhost:3001/");
+// import {io} from 'socket.io-client';
+// const socket = io.connect("http://localhost:3001/");
 
-const Loginnew = () => {
-
-    useEffect(()=>{
-        socket.emit('connected', "I connected");
-    });
+const Loginnew = (props) => {
+    
     const dispatch = useDispatch();
     dispatch(loggingIn(false));
     dispatch(currentUser({}));
@@ -24,22 +21,29 @@ const Loginnew = () => {
 
     var obj = {
         email: email,
-        password: password
+        password: password,
+        socketID: ''
     };
 
     const validate = (e) => {
         e.preventDefault();
+        props.socket.emit('click', "button clicked");
+        props.socket.on('getSocketId', (socketId) => {
+            obj.socketID = socketId
 
-        if (email !== '' && password !== '') {
-            dispatch(readUser(obj));
-            setEmail('');
-            setPassword('');
-            alert('successfully logged in');
-            navigate('/dashboard');
-        }
-        else {
-            alert('input fields must not be empty');
-        }
+            if (email !== '' && password !== '') {
+                dispatch(readUser(obj));
+                setEmail('');
+                setPassword('');
+                alert('successfully logged in');
+                navigate('/dashboard');
+            }
+            else {
+                alert('input fields must not be empty');
+            }
+        });
+
+       
 
     }
 

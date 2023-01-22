@@ -80,6 +80,7 @@ const weatherSlice = createSlice({
         },
 
         currentUser: (state, action) => {
+            console.log('executed');
             state.currentUser = action.payload;
         }
     },

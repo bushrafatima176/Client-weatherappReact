@@ -7,21 +7,18 @@ import Signupnew from "./components/Signup";
 import DashboardApp from "./components/Dashboard"
 import BasicTextFields from './components/Inputfields';
 import MediaCard from "./components/Card"
-// import {io} from 'socket.io-client';
-// const socket = io.connect("http://localhost:3001/");
+import {io} from 'socket.io-client';
+const socket = io.connect("http://localhost:3001/");
 
 const App = () => {
 
-  // useEffect(() => {
-  //   socket.emit("chat","insia");
-  // }, []);
   return (
     <>
        <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Loginnew/>} />
+        <Route path='/' element={<Loginnew socket={socket}/>} />
         <Route path='/signup' element={<Signupnew />} /> 
-        <Route path='/dashboard' element ={<DashboardApp />}/>
+        <Route path='/dashboard' element ={<DashboardApp socket={socket} />}/>
 
        </Routes>
     </BrowserRouter> 
