@@ -17,9 +17,7 @@ const Signupnew = () => {
     var obj = {
         email: email,
         username: username,
-        password: password,
-        city: [],
-        temp: []
+        password: password
     };
 
     function setData(e) {
@@ -61,12 +59,12 @@ const Signupnew = () => {
                             onChange={(e) => setPassword(e.target.value)} />
 
                     </div>
-                    <input onClick={setData} type="submit" name="" value="Signup" />
+                    <input onClick={setData} type="submit" name="" value="Sign up" />
                 </form>
                 <div className="text-center">
                 </div>
                 <div className="text-center">
-                    <Link style={{textAlign:"center"}} to="/">Login</Link>
+                    <Link style={{textAlign:"center"}} to="/">Sign in</Link>
                 </div>
             </div>
         </>

@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { currentUser, readUser, loggingIn } from '../Store/reducers/weatherstore';
 import userIcon from "./Images/user.png";
 import "./login.css"
 import Lottie from "lottie-react"
-import weatherapp from "./Images/103361-weather.json"
+import weatherapp from "./Images/103361-weather.json";
+import {io} from 'socket.io-client';
+const socket = io.connect("http://localhost:3001/");
 
 const Loginnew = () => {
 
+    useEffect(()=>{
+        socket.emit('connected', "I connected");
+    });
     const dispatch = useDispatch();
     dispatch(loggingIn(false));
     dispatch(currentUser({}));
@@ -62,13 +67,13 @@ const Loginnew = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <input onClick={validate} type="submit" name="" value="Login" />
+                    <input onClick={validate} type="submit" name="" value="Sign in" />
                 </form>
                 <div className="text-center">
 
                 </div>
                 <div className="text-center">
-                    <Link style={{ textAlign: "center" }} to="/Signup">Sign-up</Link>
+                    <Link style={{ textAlign: "center" }} to="/signup">Sign-up</Link>
                 </div>
             </div>
         </>

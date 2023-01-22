@@ -7,8 +7,9 @@ const initialState = {
         username: '',
         password: '',
         city: [],
-        temp: []
+        //temp: []
     },
+    //currentCity: {},
     isLoggedIn: false,
     loader: false,
     isError: false,
@@ -52,6 +53,20 @@ export const addCity = createAsyncThunk('weatherSlice/addcity', async (data, thu
     };
 
     const response = await fetch('http://localhost:3001/addcity', requestOptions);
+    return response.json();
+
+});
+
+export const getCityData = createAsyncThunk('weatherSlice/getdata', async(data, thunkApi)=>{
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    };
+
+    const response = await fetch('http://localhost:3001/getcitydata', requestOptions);
     return response.json();
 
 });
@@ -111,6 +126,16 @@ const weatherSlice = createSlice({
         [addCity.rejected]: () => {
             console.log('rejected');
         },
+        [getCityData.pending]: ()=>{
+            console.log('pending');
+        },
+        [getCityData.fulfilled]: (state, action)=>{
+            //state.cities = [...state.cities, action.payload.data]
+            state.currentCity = action.payload.data;
+        },
+        [getCityData.rejected]: ()=>{
+            console.log('rejected');
+        }
 
     }
 });
