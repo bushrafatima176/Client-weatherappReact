@@ -67,7 +67,7 @@ const Loginnew = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <input onClick={validate} type="submit" name="" value="Login" />
+                    <input onClick={validate} type="submit" name="" value="Sign in" />
                 </form>
                 <div className="text-center">
 
