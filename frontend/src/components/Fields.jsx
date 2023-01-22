@@ -15,7 +15,7 @@ const AppField = () => {
     return (
         <>
             <div className="app-field">
-                <label>{currentCity.name}  {currentCity.temp}</label> <br />
+                <label>Karachi</label> <br />
                 <label>Lahore</label><br />
                 <label>Islamabad</label><br />
                 <label>Quetta</label><br />

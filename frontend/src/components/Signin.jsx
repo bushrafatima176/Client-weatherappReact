@@ -68,7 +68,7 @@ const Loginnew = () => {
 
                 </div>
                 <div className="text-center">
-                    <Link style={{ textAlign: "center" }} to="/Signup">Sign-up</Link>
+                    <Link style={{ textAlign: "center" }} to="/signup">Sign-up</Link>
                 </div>
             </div>
         </>
