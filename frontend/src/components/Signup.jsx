@@ -17,9 +17,7 @@ const Signupnew = () => {
     var obj = {
         email: email,
         username: username,
-        password: password,
-        city: [],
-        temp: []
+        password: password
     };
 
     function setData(e) {
