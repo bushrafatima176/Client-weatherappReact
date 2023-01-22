@@ -1,9 +1,16 @@
-import { getCityData } from "../Store/reducers/weatherstore";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import BasicModal from "./Navbar"
+const AppField = ()=>{
+    return(
+<>
+<div className="app-field"><label >Karachi<BasicModal/> </label> <br/>
+<label>Lahore <BasicModal/> </label><br/>
+<label>Islamabad</label><br/>
+<label>Quetta</label><br/>
+<label>Peshawar  </label><br/></div>
+</>)}
 
 
-const AppField = () => {
+{/* const AppField = () => {
 
     const dispatch = useDispatch();
     const { currentCity } = useSelector((state) => state.weatherapp)
@@ -24,6 +31,6 @@ const AppField = () => {
 
         </>
     )
-}
+} */}
 
 export default AppField;
