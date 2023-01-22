@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import DetailedInfo from "./Card"
+import AppField from './Fields';
 
 const style = {
   position: 'absolute',
@@ -26,7 +27,7 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Label</Button><br/>
+      <Button onClick={handleOpen}></Button><br/>
     
       <Modal
         open={open}
