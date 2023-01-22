@@ -1,33 +1,44 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import image from "./Images/weather.png"
+import React from 'react';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
 
-export default function MediaCard() {
-  return (
-    <Card sx={{ Width: 100 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-      />
-      <img src={image} />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-         Karachi
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+const DetailedInfo = () => (<div>
+	<div className="whole-details-area">
+   <h4 className='detail-text detail-date'>Weather Forecasts Issue:</h4>
+    <h4 className='detail-text'>Name</h4>
+    <icon></icon>
+      <h5 className='detail-text'>Description</h5>
     
-  );
-}
+		<Table className="weather-details">
+			<TableBody>
+     
+    <TableRow> 
+					<TableCell style={{color:"white",fontSize: '15px' }}>Temperature</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}>&deg;</TableCell>
+				</TableRow>
+				<TableRow>
+					<TableCell  style={{color:"white",fontSize: '15px'}}>Feel Like</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}>&deg;</TableCell>
+				</TableRow>
+        <TableRow>
+					<TableCell  style={{color:"white",fontSize: '15px'}}>Pressure</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}>%</TableCell>
+				</TableRow>
+				<TableRow>
+					<TableCell  style={{color:"white",fontSize: '15px'}}>Humidity</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}>%</TableCell>
+				</TableRow>
+				<TableRow>
+					<TableCell  style={{color:"white",fontSize: '15px'}}>Wind Speed</TableCell>
+					<TableCell style={{color:"white",fontSize: '15px'}}></TableCell>
+				</TableRow>
+			
+			</TableBody>
+		</Table>
+	</div>
+  </div>
+);
+
+export default DetailedInfo;
