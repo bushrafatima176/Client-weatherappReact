@@ -3,42 +3,65 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
+import { useSelector } from 'react-redux';
 
-const DetailedInfo = () => (<div>
-	<div className="whole-details-area">
-   <h4 className='detail-text detail-date'>Weather Forecasts Issue:</h4>
-    <h4 className='detail-text'>Name</h4>
-    <icon></icon>
-      <h5 className='detail-text'>Description</h5>
-    
-		<Table className="weather-details">
-			<TableBody>
-     
-    <TableRow> 
-					<TableCell style={{color:"white",fontSize: '15px' }}>Temperature</TableCell>
-					<TableCell style={{color:"white",fontSize: '15px'}}>&deg;</TableCell>
-				</TableRow>
-				<TableRow>
-					<TableCell  style={{color:"white",fontSize: '15px'}}>Feel Like</TableCell>
-					<TableCell style={{color:"white",fontSize: '15px'}}>&deg;</TableCell>
-				</TableRow>
-        <TableRow>
-					<TableCell  style={{color:"white",fontSize: '15px'}}>Pressure</TableCell>
-					<TableCell style={{color:"white",fontSize: '15px'}}>%</TableCell>
-				</TableRow>
-				<TableRow>
-					<TableCell  style={{color:"white",fontSize: '15px'}}>Humidity</TableCell>
-					<TableCell style={{color:"white",fontSize: '15px'}}>%</TableCell>
-				</TableRow>
-				<TableRow>
-					<TableCell  style={{color:"white",fontSize: '15px'}}>Wind Speed</TableCell>
-					<TableCell style={{color:"white",fontSize: '15px'}}></TableCell>
-				</TableRow>
-			
-			</TableBody>
-		</Table>
-	</div>
-  </div>
-);
+const DetailedInfo = (props) => {
+
+	const emojis = {
+		'01d': '☀️',
+		'02d': '⛅️',
+		'03d': '☁️',
+		'04d': '☁️',
+		'09d': '🌧',
+		'10d': '🌦',
+		'11d': '⛈',
+		'13d': '❄️',
+		'50d': '💨',
+		'01n': '☀️',
+		'02n': '⛅️',
+		'03n': '☁️',
+		'04n': '☁️',
+		'09n': '🌧',
+		'10n': '🌦',
+		'11n': '⛈',
+		'13n': '❄️',
+		'50n': '💨',
+	};
+
+	const {currentUser} = useSelector((state)=>state.weatherapp);
+	return (
+		<div>
+			<div className="whole-details-area">
+				<h4 style={{ color: "black" }} className='detail-text detail-date'>Weather Forecasts Issued at:</h4>
+				<h4 className='detail-text detail-date'>{currentUser.fetchedAt}</h4>
+				<h4 style={{textTransform: 'capitalize'}} className='detail-text'>{props.cityInfo.name}</h4>
+				<icon style={{ fontSize: "80px", paddingLeft: "33%" }}>{emojis[props.cityInfo.icon]}</icon>
+				<h5 style={{ textTransform: 'capitalize' }} className='detail-text'>{props.cityInfo.descr}</h5>
+
+				<Table className="weather-details">
+					<TableBody>
+
+						<TableRow>
+							<TableCell style={{ color: "white", fontSize: '15px' }}>Temperature</TableCell>
+							<TableCell style={{ color: "white", fontSize: '15px' }}>{props.cityInfo.temp}</TableCell>
+						</TableRow>
+						<TableRow>
+							<TableCell style={{ color: "white", fontSize: '15px' }}>Feel Like</TableCell>
+							<TableCell style={{ color: "white", fontSize: '15px' }}>{props.cityInfo.feels}&deg;</TableCell>
+						</TableRow>
+						<TableRow>
+							<TableCell style={{ color: "white", fontSize: '15px' }}>Pressure</TableCell>
+							<TableCell style={{ color: "white", fontSize: '15px' }}>{props.cityInfo.pressure}%</TableCell>
+						</TableRow>
+						<TableRow>
+							<TableCell style={{ color: "white", fontSize: '15px' }}>Humidity</TableCell>
+							<TableCell style={{ color: "white", fontSize: '15px' }}>{props.cityInfo.humidity}%</TableCell>
+						</TableRow>
+					</TableBody>
+				</Table>
+			</div>
+		</div>
+	)
+};
 
 export default DetailedInfo;

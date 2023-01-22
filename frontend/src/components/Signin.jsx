@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { currentUser, readUser, loggingIn } from '../Store/reducers/weatherstore';
 import userIcon from "./Images/user.png";
 import "./login.css"
-import Lottie from "lottie-react"
-import weatherapp from "./Images/103361-weather.json";
-// import {io} from 'socket.io-client';
-// const socket = io.connect("http://localhost:3001/");
+
 
 const Loginnew = (props) => {
-    
+
     const dispatch = useDispatch();
     dispatch(loggingIn(false));
     dispatch(currentUser({}));
@@ -48,13 +45,7 @@ const Loginnew = (props) => {
     }
 
     return (
-        <>
-
-            <Lottie
-                animationData={weatherapp}
-                loop={true}
-
-            />
+        <>       
             <div className="loginBox">
                 <img className="user" src={userIcon} height="100px" width="100px" />
                 <h3>Sign-In</h3>

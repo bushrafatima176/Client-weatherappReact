@@ -6,10 +6,9 @@ const initialState = {
         email: '',
         username: '',
         password: '',
-        city: [],
-        //temp: []
+        city: []
     },
-    //currentCity: {},
+    currentCity: {},
     isLoggedIn: false,
     loader: false,
     isError: false,
@@ -57,20 +56,6 @@ export const addCity = createAsyncThunk('weatherSlice/addcity', async (data, thu
 
 });
 
-export const getCityData = createAsyncThunk('weatherSlice/getdata', async(data, thunkApi)=>{
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-    };
-
-    const response = await fetch('http://localhost:3001/getcitydata', requestOptions);
-    return response.json();
-
-});
-
 const weatherSlice = createSlice({
     name: 'weatherSlice',
     initialState,
@@ -94,10 +79,12 @@ const weatherSlice = createSlice({
         [addUser.rejected]: () => {
             console.log('rejected');
         },
-        [readUser.pending]: () => {
+        [readUser.pending]: (state, action) => {
             console.log('pending');
+            state.loader = true;
         },
         [readUser.fulfilled]: (state, action) => {
+            state.loader = false;
             if (action.payload.error !== undefined) {
                 state.isError = true;
                 alert(action.payload.error);
@@ -106,7 +93,6 @@ const weatherSlice = createSlice({
                 state.isError = false;
                 state.currentUser = action.payload.data;
                 state.isLoggedIn = true;
-                // alert('successfully logged in');
             }
         },
         [readUser.rejected]: () => {
@@ -117,7 +103,6 @@ const weatherSlice = createSlice({
         },
         [addCity.fulfilled]: (state, action) => {
             if (action.payload.message !== undefined) {
-                //state.isError = true;
                 alert(action.payload.message);
             }
             else {
@@ -125,16 +110,6 @@ const weatherSlice = createSlice({
             }
         },
         [addCity.rejected]: () => {
-            console.log('rejected');
-        },
-        [getCityData.pending]: ()=>{
-            console.log('pending');
-        },
-        [getCityData.fulfilled]: (state, action)=>{
-            //state.cities = [...state.cities, action.payload.data]
-            state.currentCity = action.payload.data;
-        },
-        [getCityData.rejected]: ()=>{
             console.log('rejected');
         }
 

@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import DetailedInfo from "./Card"
-import AppField from './Fields';
 
 const style = {
   position: 'absolute',
@@ -20,7 +19,7 @@ const style = {
   p: 2,
 };
 
-export default function BasicModal() {
+export default function BasicModal(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -38,7 +37,7 @@ export default function BasicModal() {
         <Box sx={style}>
          
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-          <DetailedInfo/>
+          <DetailedInfo cityInfo={props.cityInfo}/>
           </Typography>
         </Box>
       </Modal>
