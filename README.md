@@ -1,4 +1,9 @@
 # Client-weatherappReact
+Frontend has been deployed on the URL:
+https://weatherapp-socketio.surge.sh
+Backend Github Link:
+https://github.com/Bisma-Rasheed/server-weatherapp
+
 
 RR-FP - Sprint 1 - Task 1: Design your App Wireframes (completed by Bushra Fatima)
 ![alt-text](https://github.com/bushrafatima176/Client-weatherappReact/blob/master/wireframe/Screen-1.PNG)
