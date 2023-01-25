@@ -8,7 +8,6 @@ const initialState = {
         password: '',
         city: []
     },
-    currentCity: {},
     isLoggedIn: false,
     loader: false,
     isError: false,
