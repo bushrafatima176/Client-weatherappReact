@@ -36,8 +36,7 @@ code {
 
 
 .detail-text {
-  color: white;
   text-align: center;
   font-size: 30x;
-  padding: 10px;
+  padding: 0px;
 }

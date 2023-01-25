@@ -11,7 +11,7 @@ export default function MediaCard() {
     <>
       <div style={{ display: "flex", flexDirection: "row" }}>
         <Card sx={{
-          maxWidth: 500, maxHeight: "80%", borderRadius: "10px",
+          maxWidth: 500, maxHeight: "35%", borderRadius: "10px",
           boxShadow: "0 14px 28px rgba(0,0,0,0.25)", marginRight: "2%", marginLeft: "2%"
         }}>
           <CardContent>
@@ -23,7 +23,7 @@ export default function MediaCard() {
 
         </Card>
         <Card sx={{
-          maxWidth: 500, maxHeight: "80%", borderRadius: " 10px",
+          maxWidth: 500, maxHeight: "35%", borderRadius: " 10px",
           boxShadow: "0 14px 28px rgba(0,0,0,0.25)", overflowY: "auto"
         }}>
           <CardContent>

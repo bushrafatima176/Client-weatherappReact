@@ -16,13 +16,13 @@ const DashboardApp = (props) => {
     })
     return (
         <>
-        <Link style={{ color: "aliceblue", backgroundColor: "black" }} to="/">Log out</Link>
+      
             <h1 style={{ textAlign: "center", color: "#565BEA", fontSize: "40px", marginTop: "50px" }} c>
                 Weather App
-            </h1>
+            </h1> <button style={{marginLeft:"90%",marginBottom:"7px",backgroundColor:  "#565BEA",width:"5%",padding:"5px"}}> <Link style={{ textDecoration:"none",color: "white" }} to="/">Log out</Link></button>
             <br />
             <div style={{ display: "flex", flexDirection: "row" }}> <MediaCard />
-                <img src={image} style={{ width: "40%", paddingLeft: "80px" }} /></div>
+                <img src={image} style={{width: "35%", paddingLeft: "10%",paddingBottom:"50%" }} /></div>
 
         </>
 
