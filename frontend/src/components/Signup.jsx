@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import {addUser} from '../Store/reducers/weatherstore';
-import userIcon from "./Images/user2.png"
+import userIcon from "./Images/user1.png"
 import './login.css';
 
 const Signupnew = () => {

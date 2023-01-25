@@ -18,11 +18,11 @@ const DashboardApp = (props) => {
     return (
         <>
 
-            <h1 style={{ textAlign: "center", color: "#565BEA", fontSize: "40px", marginTop: "50px" }} c>
+            <h1 style={{ textAlign: "center", color: "#565BEA", fontSize: "40px", marginTop: "30px" }} c>
                 Weather App
             </h1>
-            <h3 style={{backgroundColor: 'black', textAlign: 'center', padding:'7px'}}>{username}</h3>
-            <button style={{ marginLeft: "90%", marginBottom: "7px", backgroundColor: "#565BEA", width: "5%", padding: "5px", marginTop:'4px' }}>
+            <h3 style={{backgroundColor: '#91b3fa', textAlign: 'center', padding:'7px'}}>{username}</h3>
+            <button style={{ marginLeft: "90%", marginBottom: "7px", backgroundColor: "#565BEA",borderColor:"#91b3fa", width: "5%", padding: "5px", marginTop:'4px' }}>
                 <a style={{ textDecoration: "none", color: "white" }} href="/">Log out</a>
             </button>
             <br />
