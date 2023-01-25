@@ -63,7 +63,7 @@ const weatherSlice = createSlice({
             state.isLoggedIn = action.payload
         },
 
-        currentUser: (state, action) => {
+        currentuser: (state, action) => {
             console.log('executed');
             state.currentUser = action.payload;
         }
@@ -115,5 +115,5 @@ const weatherSlice = createSlice({
     }
 });
 
-export const { loggingIn, currentUser } = weatherSlice.actions;
+export const { loggingIn, currentuser } = weatherSlice.actions;
 export default weatherSlice.reducer;
