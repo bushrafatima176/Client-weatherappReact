@@ -31,7 +31,7 @@ export default function BasicTextFields() {
     <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 2, width: '25ch', Color: "#565BEA" },
+        '& > :not(style)': { m: 4, width: '25ch', Color: "#565BEA" },
       }}
       noValidate
       autoComplete="off"
@@ -41,12 +41,12 @@ export default function BasicTextFields() {
       <TextField id="outlined-basic" value={city} onChange={(e) => setCity(e.target.value)} label="Enter city name" variant="outlined" style={{ Color: "#565BEA" }} /><br />
       <label className='inputfields'>Temperature Unit </label><br />
       <label for="Tempunit"></label>
-      <select name="TempUnit" id="cars" onChange={(e)=>setTemp(e.target.value)}>
+      <select name="TempUnit" style={{width: '60%', height: "50px",marginRight: "170%",paddingLeft:"0",Color: "#565BEA"}} id="cars" onChange={(e)=>setTemp(e.target.value)}>
         <option value="C">C</option>
         <option value="F">F</option>
       </select>
 
-      <Fab style={{ backgroundColor: "#91b3fa", width: "50px", marginLeft: "40%" }} size="small" color="primary" aria-label="add">
+      <Fab style={{ backgroundColor: "#91b3fa", width: "50px", marginLeft: "40%",marginBottom:"10%"}} size="small" color="primary" aria-label="add">
 
         <AddIcon onClick={handleClick} />
       </Fab>
