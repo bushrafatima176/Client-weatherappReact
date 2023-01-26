@@ -35,7 +35,7 @@ const DetailedInfo = (props) => {
 				<h4 style={{ color: "black" }} className='detail-text detail-date'>Weather Forecasts Issued at:</h4>
 				<h4 className='detail-text detail-date'>{currentUser.fetchedAt}</h4>
 				<h4 style={{textTransform: 'capitalize',fontSize:"30px",color:"#565BEA"}} className='detail-text'>{props.cityInfo.name}</h4>
-				<icon style={{  fontSize: "50px", paddingLeft: "37%"}}>{emojis[props.cityInfo.icon]}</icon>
+				<icon style={{  fontSize: "50px", paddingLeft: "37%",marginTop:"0"}}>{emojis[props.cityInfo.icon]}</icon>
 				<h5 style={{ textTransform: 'capitalize',color:"#565BEA" }} className='detail-text'>{props.cityInfo.descr}</h5>
 
 				<Table className="weather-details">

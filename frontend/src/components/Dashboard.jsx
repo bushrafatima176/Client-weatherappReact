@@ -30,7 +30,7 @@ const DashboardApp = (props) => {
             <br />
             <div style={{ display: "flex", flexDirection: "row" }}>
                 <MediaCard />
-                <img src={image} style={{ width: "35%", paddingLeft: "10%", paddingBottom: "50%" }} />
+                <img src={image} style={{ width: "35%", paddingLeft: "5%", paddingBottom: "50%" }} />
             </div>
 
         </>: <h1>Loading...</h1>): (navigate('/'))
