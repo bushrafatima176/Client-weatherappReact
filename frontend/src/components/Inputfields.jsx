@@ -13,7 +13,7 @@ export default function BasicTextFields() {
   const dispatch = useDispatch();
   const {currentUser} = useSelector((state)=>state.weatherapp);
   const [city, setCity] = useState('');
-  const [temp, setTemp] = useState('');
+  const [temp, setTemp] = useState('C');
 
   var obj = {
     city: city,
@@ -23,6 +23,7 @@ export default function BasicTextFields() {
 
   const handleClick = (e) => {
     e.preventDefault();
+    console.log(temp);
     dispatch(addCity(obj));
 
   }
@@ -40,17 +41,16 @@ export default function BasicTextFields() {
       <label className='inputfields'>City </label><br />
       <TextField id="outlined-basic" value={city} onChange={(e) => setCity(e.target.value)} label="Enter city name" variant="outlined" style={{ Color: "#565BEA" }} /><br />
       <label className='inputfields'>Temperature Unit </label><br />
-      <label for="Tempunit"></label>
-      <select name="TempUnit" style={{width: '60%', height: "50px",marginRight: "170%",paddingLeft:"0",Color: "#565BEA"}} id="cars" onChange={(e)=>setTemp(e.target.value)}>
+      <label htmlFor="TempUnit"></label>
+      <select name="TempUnit" style={{width: '60%', height: "50px",marginRight: "170%",paddingLeft:"10px",Color: "#565BEA"}} id="tempUnit" onChange={(e)=>setTemp(e.target.value)}>
         <option value="C">C</option>
         <option value="F">F</option>
       </select>
 
-      <Fab style={{ backgroundColor: "#91b3fa", width: "50px", marginLeft: "40%",marginBottom:"10%"}} size="small" color="primary" aria-label="add">
+      <Fab style={{ backgroundColor: "#91b3fa", width: "50px",padding:'30px', marginLeft: "40%",marginBottom:"20%", marginTop:'0'}} size="small" color="primary" aria-label="add">
 
         <AddIcon onClick={handleClick} />
       </Fab>
-      <BasicModal />
     </Box>
 
   );

@@ -8,7 +8,7 @@ const AppField = () => {
         !loader ? 
         <>
         
-            <div className="app-field">
+            <div style={{width: '300px'}} className="app-field">
                 {currentUser.city.map((cityInfo, i) => {
                     if (cityInfo !== undefined) {
                         return ( <label style={{textTransform: 'capitalize'}}>{cityInfo.name} <BasicModal cityInfo={cityInfo} /> </label>)

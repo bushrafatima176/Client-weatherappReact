@@ -89,9 +89,11 @@ const weatherSlice = createSlice({
                 alert(action.payload.error);
             }
             else {
+                
                 state.isError = false;
                 state.currentUser = action.payload.data;
                 state.isLoggedIn = true;
+                alert('successfully logged in');
             }
         },
         [readUser.rejected]: () => {

@@ -3,11 +3,13 @@ import image from "./Images/weather.png"
 import { useEffect } from "react";
 import { currentuser } from "../Store/reducers/weatherstore";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 
 const DashboardApp = (props) => {
 
-    const {currentUser} = useSelector((state)=>state.weatherapp);
+    let navigate = useNavigate();
+    const {currentUser, loader, isError} = useSelector((state)=>state.weatherapp);
     const username = currentUser.username;
     const dispatch = useDispatch();
     useEffect(() => {
@@ -15,7 +17,7 @@ const DashboardApp = (props) => {
             dispatch(currentuser(data));
         })
     })
-    return (
+    return !isError ? (!loader ?
         <>
 
             <h1 style={{ textAlign: "center", color: "#565BEA", fontSize: "40px", marginTop: "30px" }} c>
@@ -31,9 +33,7 @@ const DashboardApp = (props) => {
                 <img src={image} style={{ width: "35%", paddingLeft: "10%", paddingBottom: "50%" }} />
             </div>
 
-        </>
-
-    )
+        </>: <h1>Loading...</h1>): (navigate('/'))
 }
 
 export default DashboardApp;

@@ -32,7 +32,6 @@ const Loginnew = (props) => {
                 dispatch(readUser(obj));
                 setEmail('');
                 setPassword('');
-                alert('successfully logged in');
                 navigate('/dashboard');
             }
             else {
