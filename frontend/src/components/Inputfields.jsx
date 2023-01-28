@@ -39,11 +39,11 @@ export default function BasicTextFields() {
     >
 
       <label className='inputfields'>City </label><br />
-      <TextField id="outlined-basic" value={city} onChange={(e) => setCity(e.target.value)} label="Enter city name" variant="outlined" style={{ Color: "#565BEA" }} /><br />
+      <TextField id="outlined-basic" value={city} onChange={(e) => setCity(e.target.value)} label="Enter city name" variant="outlined" style={{ Color: "#565BEA",marginTop:"0" }} /><br />
 
      <div style={{display:"flex",flexDirection:"column",marginTop:"0",width:"126%",height:"50%"}}><label className='inputfields' >Temperature Unit </label><br />
       <label htmlFor="TempUnit"></label>
-      <select name="TempUnit" style={{width: '70%', height: "50px",paddingLeft:"10px",Color: "#565BEA"}} id="tempUnit" onChange={(e)=>setTemp(e.target.value)}>
+      <select name="TempUnit" style={{width: '70%', height: "50px",paddingLeft:"10px",Color: "#565BEA",marginTop:"30px"}} id="tempUnit" onChange={(e)=>setTemp(e.target.value)}>
       <option>Select</option>
         <option value="C">C</option>
         <option value="F">F</option>
